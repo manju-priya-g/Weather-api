@@ -102,7 +102,7 @@
         <?php
         if(isset($_POST['button'])){
         $city= $_POST['city'];
-        $url='https://api.openweathermap.org/data/2.5/weather?q='.urlencode($city).'&appid=299d46115a75cc07a823594680426680';
+        $url='https://api.openweathermap.org/data/2.5/weather?q='.urlencode($city).'&appid=YOURAPIKEY';
         $lines_array=file($url);
         $lines_string=implode('',$lines_array);
         file_put_contents("weatherReport.json", $lines_string);
